@@ -1,0 +1,81 @@
+<ion-content>
+  <div class="div1">
+    <h4 class="create">Create Your Profile</h4>
+    <img src="../../../assets/images/Ufavoursimages/Child.jpg" alt="" class="profilepic">
+  </div>
+  <div class="upload">
+    <p><small>Upload Photo</small></p>
+  </div>
+  <div class="div2">
+    <h5>Personal Informations</h5>
+  </div>
+  <div class="div3">
+    <ion-item
+      style="border-radius: 5px; margin-left: 10px; margin-right: 10px;    border: 1px solid lightgrey; height: 45px; margin-top: 10px;">
+      <ion-input type="text" placeholder="First name"></ion-input>
+    </ion-item>
+    <br>
+    <ion-item
+      style="border-radius: 5px; margin-left: 10px; margin-right: 10px;    border: 1px solid lightgrey; height: 45px;bottom: 15px;">
+      <ion-input type="password" placeholder="Last name"></ion-input>
+    </ion-item>
+    <br>
+    <ion-item
+      style="border-radius: 5px; margin-left: 10px; margin-right: 10px;    border: 1px solid lightgrey; height: 45px;bottom: 30px;">
+      <!-- <ion-input type="password" placeholder="Skill Catagory(s) "></ion-input> -->
+      <ion-label>Skill Catagory(s)</ion-label>
+      <ion-select value="dog">
+        <ion-select-option value="cat">xyz</ion-select-option>
+        <ion-select-option value="dog">abc</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <br>
+    <ion-item
+      style="border-radius: 5px; margin-left: 10px; margin-right: 10px;    border: 1px solid lightgrey; height: 45px;bottom: 45px;">
+      <ion-input type="password" placeholder="Current job title"></ion-input>
+    </ion-item>
+    <br>
+    <ion-item
+      style="border-radius: 5px; margin-left: 10px; margin-right: 10px;    border: 1px solid lightgrey; height: 45px;bottom: 55px;">
+      <ion-input type="password" placeholder="Town"></ion-input>
+    </ion-item>
+    <br>
+    <ion-item
+      style="border-radius: 5px; margin-left: 10px; margin-right: 10px;    border: 1px solid lightgrey; height: 45px;bottom: 65px;">
+      <ion-input type="password" placeholder="Postcode"></ion-input>
+    </ion-item>
+  </div>
+
+  <div class="div4">
+    <h5>Experience & Qualifications</h5>
+  </div>
+
+  <div class="div3">
+    <ion-item
+      style="border-radius: 5px; margin-left: 10px; margin-right: 10px;    border: 1px solid lightgrey; height: 45px; margin-top: 10px;">
+      <!-- <ion-input type="password" placeholder="Qualifications/certifications"></ion-input> -->
+      <ion-label>Qualifications/certifications</ion-label>
+      <ion-select value="dog">
+        <ion-select-option value="cat">xyz</ion-select-option>
+        <ion-select-option value="dog">zbc</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <br>
+    <ion-item
+      style="border-radius: 5px; margin-left: 10px; margin-right: 10px;    border: 1px solid lightgrey; height: 45px;bottom: 15px;">
+      <!-- <ion-input type="password" placeholder="Experience/employment history"></ion-input> -->
+      <ion-label>Other Favours</ion-label>
+      <ion-select value="dog">
+        <ion-select-option value="cat">Shopping</ion-select-option>
+        <ion-select-option value="dog">Cleaning</ion-select-option>
+        <ion-select-option value="dog">Company</ion-select-option>
+        <ion-select-option value="dog">Gardening</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+  </div>
+  <div padding>
+    <!-- <ion-button expand="block" (click)="onDone()">Done</ion-button> -->
+    <ion-button expand="block" routerLink="/tabs/tab2/profile" routerDirection="forward">Done</ion-button>
+  </div>
+</ion-content>

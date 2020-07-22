@@ -1,0 +1,65 @@
+.div1 {
+    background: linear-gradient(to right, #00979d 0%, #0bd3af 100%);
+    text-align: center;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 3px;
+}
+
+h4.create {
+    font-size: 20px;
+    color: #ffffff;
+}
+
+// img
+img.profilepic {
+    border-radius: 50px;
+}
+
+.div2 {
+    background: #333333;
+    padding-left: 10px;
+    padding-bottom: 1px;
+    padding-top: 3px;
+    color: #ffffff;
+}
+
+.div4 {
+    background: #333333;
+    margin-top: -50px;
+    padding-left: 10px;
+    padding-bottom: 1px;
+    padding-top: 3px;
+    color: #ffffff;
+}
+
+ion-button {
+    font-weight: 300;
+    --background: linear-gradient(to right, #00979d 0%, #0bd3af 100%);
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    margin-bottom: 10px;
+}
+
+.upload {
+    text-align: center;
+    background: #000000a1;
+    width: 25%;
+    height: 26px;
+    padding: 2px;
+    margin-left: 134px;
+    color: white;
+    position: absolute;
+    top: 100px;
+
+}
+
+// select
+ion-label#ion-sel-1-lbl {
+    color: #b4b4b4;
+}
+
+ion-item.item.md.ion-activatable.ion-focusable.item-label.hydrated.item-interactive.item-select.item-has-value {
+    color: #b4b4b4;
+}

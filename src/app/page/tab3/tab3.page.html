@@ -1,0 +1,90 @@
+<ion-content>
+  <img src="../../../assets/images/Ufavoursimages/Homepage.jpg" class="img-responsive" alt="Image">
+  <div class="texts">
+    <h3 class="logo">Welcome</h3>
+    <h1 class="logo">Ufavours</h1>
+  </div>
+  <ion-row>
+    <ion-col size="10" class="search">
+      <ion-searchbar></ion-searchbar>
+    </ion-col>
+    <ion-col size="2" class="icons" routerLink="/tabs/tab3/search">
+      <ion-icon name="options"></ion-icon>
+    </ion-col>
+  </ion-row>
+
+  <ion-row class="sliders">
+    <ion-slides class="slides" [options]="slideOpts1">
+      <ion-slide class="ion-slide" *ngFor="let list of sliderImages1">
+        <ion-avatar>
+          <img src="{{list.img}}" (click)="sliderGo(list)">
+          <p class="name"><strong></strong></p>
+        </ion-avatar>
+        <p></p>
+      </ion-slide>
+    </ion-slides>
+  </ion-row>
+
+
+  <ion-row>
+    <ion-card (click)="onCards()">
+      <ion-row>
+        <ion-col class="imgs" size="4">
+          <img src="../../../assets/images/Ufavoursimages/Child.jpg" class="img">
+        </ion-col>
+        <ion-col size="8">
+          <ion-label>
+            <h2>Rey</h2>
+            <h3>I can handle myself</h3>
+            <p>You will remove these restraints and leave...</p>
+          </ion-label>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+
+    <ion-card (click)="onCards()">
+      <ion-row>
+        <ion-col class="imgs" size="4">
+          <img src="../../../assets/images/Ufavoursimages/Child.jpg" class="img">
+        </ion-col>
+        <ion-col size="8">
+          <ion-label>
+            <h2>Rey</h2>
+            <h3>I can handle myself</h3>
+            <p>You will remove these restraints and leave...</p>
+          </ion-label>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+
+    <ion-card (click)="onCards()">
+      <ion-row>
+        <ion-col class="imgs" size="4">
+          <img src="../../../assets/images/Ufavoursimages/Child.jpg" class="img">
+        </ion-col>
+        <ion-col size="8">
+          <ion-label>
+            <h2>Rey</h2>
+            <h3>I can handle myself</h3>
+            <p>You will remove these restraints and leave...</p>
+          </ion-label>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+
+    <ion-card (click)="onCards()">
+      <ion-row>
+        <ion-col class="imgs" size="4">
+          <img src="../../../assets/images/Ufavoursimages/Child.jpg" class="img">
+        </ion-col>
+        <ion-col size="8">
+          <ion-label>
+            <h2>Rey</h2>
+            <h3>I can handle myself</h3>
+            <p>You will remove these restraints and leave...</p>
+          </ion-label>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+  </ion-row>
+</ion-content>

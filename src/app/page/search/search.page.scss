@@ -1,0 +1,38 @@
+.new-background-color {
+    --background: linear-gradient(to right, #00979d 0%, #0bd3af 100%);
+    border: 0px !important;
+}
+
+ion-title.md.title-default.hydrated {
+    color: #ffffff;
+    text-align: center;
+}
+
+
+// icons
+ion-icon.md.hydrated {
+    font-size: 25px;
+    color: #ffffff;
+    padding-left: 10px;
+}
+
+// search
+.search {
+    position: absolute;
+    width: 100%;
+    top: 100px;
+}
+
+// ion-searchbar.sc-ion-searchbar-md-h.sc-ion-searchbar-md-s.md.searchbar-left-aligned.hydrated {
+//     margin-left: 10px;
+//     margin-right: 10px;
+// }
+
+ion-card.md.hydrated {
+    height: 220px;
+}
+
+ion-back-button.md.button.back-button-has-icon-only.in-toolbar.ion-activatable.ion-focusable.hydrated {
+    display: block;
+    color: #ffffff;
+}

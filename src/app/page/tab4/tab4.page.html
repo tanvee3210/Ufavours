@@ -1,0 +1,119 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar class="new-background-color">
+    <ion-title>Notification</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-row>
+    <ion-searchbar></ion-searchbar>
+  </ion-row>
+
+  <!-- Label only -->
+  <ion-segment [(ngModel)]="notification">
+    <ion-segment-button value="for" style="text-transform: capitalize;">
+      Requests for me
+    </ion-segment-button>
+    <ion-segment-button value="from" style="text-transform: capitalize;">
+      Requests from me
+    </ion-segment-button>
+  </ion-segment>
+
+  <div [ngSwitch]="notification">
+    <ion-list *ngSwitchCase="'for'">
+      <ion-card>
+        <ion-row routerLink="/tabs/tab4/accept" routerDirection="forward">
+          <ion-col size="4">
+            <img src="../../../assets/images/Ufavoursimages/Child.jpg" alt="">
+          </ion-col>
+          <ion-col size="8">
+            <h5 class="username">Stephen Messy</h5>
+            <p class="userdes">Software Engineer</p>
+            <p class="address">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet veniam facilis.</p>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+
+      <ion-card>
+        <ion-row>
+          <ion-col size="4">
+            <img src="../../../assets/images/Ufavoursimages/Child.jpg" alt="">
+          </ion-col>
+          <ion-col size="8">
+            <h5 class="username">Stephen Messy</h5>
+            <p class="userdes">Software Engineer</p>
+            <p class="address">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet veniam facilis.</p>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+
+      <ion-card>
+        <ion-row>
+          <ion-col size="4">
+            <img src="../../../assets/images/Ufavoursimages/Child.jpg" alt="">
+          </ion-col>
+          <ion-col size="8">
+            <h5 class="username">Stephen Messy</h5>
+            <p class="userdes">Software Engineer</p>
+            <p class="address">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet veniam facilis.</p>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+
+      <ion-card>
+        <ion-row>
+          <ion-col size="4">
+            <img src="../../../assets/images/Ufavoursimages/Child.jpg" alt="">
+          </ion-col>
+          <ion-col size="8">
+            <h5 class="username">Stephen Messy</h5>
+            <p class="userdes">Software Engineer</p>
+            <p class="address">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet veniam facilis.</p>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'from'">
+      <ion-card>
+        <ion-row routerLink="/tabs/tab4/timevalidation" routerDirection="forward">
+          <ion-col size="4">
+            <img src="../../../assets/images/Ufavoursimages/Child.jpg" alt="">
+          </ion-col>
+          <ion-col size="8">
+            <h5 class="username">Stephen Messy</h5>
+            <p class="userdes">Software Engineer</p>
+            <p class="address">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet veniam facilis.</p>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+
+      <ion-card>
+        <ion-row>
+          <ion-col size="4">
+            <img src="../../../assets/images/Ufavoursimages/Child.jpg" alt="">
+          </ion-col>
+          <ion-col size="8">
+            <h5 class="username">Stephen Messy</h5>
+            <p class="userdes">Software Engineer</p>
+            <p class="address">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet veniam facilis.</p>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+
+      <ion-card>
+        <ion-row>
+          <ion-col size="4">
+            <img src="../../../assets/images/Ufavoursimages/Child.jpg" alt="">
+          </ion-col>
+          <ion-col size="8">
+            <h5 class="username">Stephen Messy</h5>
+            <p class="userdes">Software Engineer</p>
+            <p class="address">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet veniam facilis.</p>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    </ion-list>
+  </div>
+
+</ion-content>
