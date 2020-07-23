@@ -8,6 +8,7 @@ import 'rxjs/add/operator/map';
 import 'rxjs/Rx';
 import { from } from 'rxjs';
 declare var google, map, infoWindow;
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
@@ -15,8 +16,10 @@ declare var google, map, infoWindow;
 })
 export class LoginPage implements OnInit {
   email: any
-  password: any
+  password: any 
+  getLogin:any
   forloginuser: any
+  
   constructor(private router: Router,
     public alertCtrl: AlertController,
     private http: Http,
@@ -66,8 +69,10 @@ export class LoginPage implements OnInit {
   }
 
 
-  async getloginuser(data) {
-    localStorage.setItem('userDetails', JSON.stringify(data.response));
-    this.router.navigate(['/', 'tabs'])
+  async getloginuser(u:any) {
+    this.api_service.user = u;
+    console.log("here check", u);
+    this.api_service.updateUser();
+    this.router.navigate(['/', 'tab2'])
   }
 }

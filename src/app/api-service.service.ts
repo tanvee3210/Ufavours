@@ -8,8 +8,23 @@ import { ToastController, LoadingController } from '@ionic/angular';
 })
 export class ApiServiceService {
   API_BASE = 'https://ufavours.sdssoftltd.co.uk/';
-  constructor(public http: HttpClient, public loadingCtrl: LoadingController, private toastCtrl: ToastController) { }
+  user: any = {};
   loader = null;
+  selectedChatUser: any = []
+  // _isLoggedIn: boolean;
+
+  constructor(public http: HttpClient, public loadingCtrl: LoadingController, private toastCtrl: ToastController) {
+    let userExist = localStorage.getItem('userDetails');
+    //   console.log('user', userExist);
+    if (userExist && userExist != 'undefined') {
+      userExist = JSON.parse(userExist);
+      this.user = userExist;
+      console.log("userExist", userExist);
+    }
+  }
+
+
+
   async showLoader() {
     this.loader = await this.loadingCtrl.create({
       message: "Please wait..."
@@ -30,8 +45,9 @@ export class ApiServiceService {
     await this.loader.dismiss();
   }
 
-  async clickSignup() {
-
+  async updateUser() {
+    console.log('user', this.user);
+    localStorage.setItem('userDetails', JSON.stringify(this.user));
   }
 
   async clickLogin() {

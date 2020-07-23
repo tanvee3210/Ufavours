@@ -12,7 +12,7 @@
   </ion-row>
 
   <ion-row class="cards">
-    <ion-card routerLink="/tabs/tab1/message" routerDirection="forward">
+    <ion-card (click)="onMessage()" routerDirection="forward" *ngFor="let list of inboxList; let i = index;">
       <ion-row>
         <ion-col class="imgs" size="4">
           <img src="../../../assets/images/Ufavoursimages/Child.jpg">
@@ -20,68 +20,8 @@
         <ion-col size="8">
           <ion-label>
             <h2>Rey</h2>
-            <h3>I can handle myself</h3>
-            <p>You will remove these restraints and leave...</p>
-          </ion-label>
-        </ion-col>
-      </ion-row>
-    </ion-card>
-
-    <ion-card>
-      <ion-row>
-        <ion-col class="imgs" size="4">
-          <img src="../../../assets/images/Ufavoursimages/Child.jpg">
-        </ion-col>
-        <ion-col size="8">
-          <ion-label>
-            <h2>Rey</h2>
-            <h3>I can handle myself</h3>
-            <p>You will remove these restraints and leave...</p>
-          </ion-label>
-        </ion-col>
-      </ion-row>
-    </ion-card>
-
-    <ion-card>
-      <ion-row>
-        <ion-col class="imgs" size="4">
-          <img src="../../../assets/images/Ufavoursimages/Child.jpg">
-        </ion-col>
-        <ion-col size="8">
-          <ion-label>
-            <h2>Rey</h2>
-            <h3>I can handle myself</h3>
-            <p>You will remove these restraints and leave...</p>
-          </ion-label>
-        </ion-col>
-      </ion-row>
-    </ion-card>
-
-    <ion-card>
-      <ion-row>
-        <ion-col class="imgs" size="4">
-          <img src="../../../assets/images/Ufavoursimages/Child.jpg">
-        </ion-col>
-        <ion-col size="8">
-          <ion-label>
-            <h2>Rey</h2>
-            <h3>I can handle myself</h3>
-            <p>You will remove these restraints and leave...</p>
-          </ion-label>
-        </ion-col>
-      </ion-row>
-    </ion-card>
-
-    <ion-card>
-      <ion-row>
-        <ion-col class="imgs" size="4">
-          <img src="../../../assets/images/Ufavoursimages/Child.jpg">
-        </ion-col>
-        <ion-col size="8">
-          <ion-label>
-            <h2>Rey</h2>
-            <h3>I can handle myself</h3>
-            <p>You will remove these restraints and leave...</p>
+            <h3>{{list.bio}}</h3>
+            <p>{{list.message}}</p>
           </ion-label>
         </ion-col>
       </ion-row>

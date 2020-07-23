@@ -147,7 +147,7 @@ export class RegistrationPage implements OnInit {
   async userregister(data) {
     await this.api_service.hideLoader();
     localStorage.setItem('userDetails', JSON.stringify(data.response));
-    this.router.navigate(['/', 'tabs'])
+    this.router.navigate(['/', 'tab2'])
   }
 
 

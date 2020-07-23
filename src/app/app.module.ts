@@ -11,6 +11,7 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpModule } from '@angular/http'
 import { ApiServiceService } from './api-service.service';
+import { TabsService } from './tabs.service';
 //import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 @NgModule({
   declarations: [AppComponent],
@@ -18,6 +19,7 @@ import { ApiServiceService } from './api-service.service';
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule, HttpModule,],
   providers: [
     StatusBar,
+    TabsService,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy, },
     ApiServiceService,
