@@ -7,7 +7,6 @@ import { ApiServiceService } from '../../api-service.service';
 import 'rxjs/add/operator/map';
 import 'rxjs/Rx';
 import { from } from 'rxjs';
-import { Console } from 'console';
 declare var google, map, infoWindow;
 
 @Component({
@@ -30,9 +29,13 @@ export class Tab3Page implements OnInit {
     private http: Http,
     public api_service: ApiServiceService) { }
 
-  ngOnInit() {
+  ionViewDidEnter() {
     let id = this.api_service.user.data.id
     this.getReviewList()
+  }
+
+  ngOnInit() {
+
   }
   onFilter() {
     this.router.navigate(['/', 'search'])

@@ -21,10 +21,17 @@ export class Tab1Page implements OnInit {
     private http: Http,
     public api_service: ApiServiceService) { }
 
-  ngOnInit() {
-    this.getInboxList(this.api_service.user.data.id)
+
+  ionViewDidEnter() {
+    this.getInboxList()
+
   }
-  onMessage() {
+
+  ngOnInit() {
+    // this.getInboxList()
+  }
+  onMessage(thread: any) {
+    this.api_service.selectedThread = thread;
     this.router.navigate(['/', 'message']);
   }
 

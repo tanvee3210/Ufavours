@@ -2,26 +2,35 @@
   <ion-toolbar class="new-background-color">
     <!-- <ion-icon name="chevron-back-outline" slot="start" (click)="onBack()"></ion-icon> -->
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="profile" icon="chevron-back"></ion-back-button>
+      <ion-back-button defaultHref="tab1" icon="chevron-back"></ion-back-button>
     </ion-buttons>
     <ion-title>Message</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-row class="row1" style="background-color: #f5f6fa;">
-    <ion-col size="4">
-      <img src="../../../assets/images/Ufavoursimages/Child.jpg" alt="">
-    </ion-col>
-    <ion-col size="8">
-      <ion-label>
-        <h2>Rey</h2>
-        <h3>I can handle myself</h3>
-        <p>You will remove these restraints and leave...</p>
-      </ion-label>
-    </ion-col>
+  <ion-row class="row1" style="background-color: hsl(228, 33%, 97%);">
+    <ion-row class="{{isSender(list.sender_id, 'class')}}" *ngFor=" let list of viewMessageList">
+      <ion-col size="{{isSender(list.sender_id, 'size1')}}">
+        <img *ngIf="isSender(list.sender_id, 'class') !='sender-row'"
+          src="../../../assets/images/Ufavoursimages/Child.jpg" alt="">
+        <ion-label *ngIf="isSender(list.sender_id, 'class') =='sender-row'">
+          <h2>{{list.receiver_name}}</h2>
+          <p>{{list.message}}</p>
+        </ion-label>
+      </ion-col>
+      <ion-col size="{{isSender(list.sender_id,'size2')}}">
+        <ion-label *ngIf="isSender(list.sender_id, 'class') !='sender-row'">
+          <h2>{{list.receiver_name}}</h2>
+          <p>{{list.message}}.</p>
+        </ion-label>
+        <img *ngIf="isSender(list.sender_id, 'class') =='sender-row'"
+          src="../../../assets/images/Ufavoursimages/Child.jpg" alt="">
+      </ion-col>
+    </ion-row>
+
     <ion-item style="margin-left: auto; margin-right: auto; margin-top: 50px; width: 90%;margin-bottom: 25px;">
-      <ion-textarea rows="6" cols="20" placeholder="Type Message here..."></ion-textarea>
+      <ion-textarea rows="6" [(ngModel)]="message" cols="20" placeholder="Type Message here..."></ion-textarea>
     </ion-item>
     <ion-button expand="block" (click)="onSend()">Send Message</ion-button>
   </ion-row>

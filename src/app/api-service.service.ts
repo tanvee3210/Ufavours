@@ -11,6 +11,7 @@ export class ApiServiceService {
   user: any = {};
   loader = null;
   selectedChatUser: any = []
+  selectedThread: any = null;
   // _isLoggedIn: boolean;
 
   constructor(public http: HttpClient, public loadingCtrl: LoadingController, private toastCtrl: ToastController) {

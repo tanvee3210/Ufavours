@@ -12,7 +12,7 @@
   </ion-row>
 
   <ion-row class="cards">
-    <ion-card (click)="onMessage()" routerDirection="forward" *ngFor="let list of inboxList; let i = index;">
+    <ion-card (click)="onMessage(list)" routerDirection="forward" *ngFor="let list of inboxList; let i = index;">
       <ion-row>
         <ion-col class="imgs" size="4">
           <img src="../../../assets/images/Ufavoursimages/Child.jpg">

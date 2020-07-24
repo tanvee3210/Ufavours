@@ -21,98 +21,34 @@
 
   <div [ngSwitch]="notification">
     <ion-list *ngSwitchCase="'for'">
-      <ion-card>
-        <ion-row routerLink="/tabs/tab4/accept" routerDirection="forward">
+      <ion-card *ngFor="let list of requestForMe">
+        <ion-row (click)="onAcceptRequest()" routerDirection="forward">
           <ion-col size="4">
             <img src="../../../assets/images/Ufavoursimages/Child.jpg" alt="">
           </ion-col>
           <ion-col size="8">
-            <h5 class="username">Stephen Messy</h5>
-            <p class="userdes">Software Engineer</p>
-            <p class="address">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet veniam facilis.</p>
-          </ion-col>
-        </ion-row>
-      </ion-card>
-
-      <ion-card>
-        <ion-row>
-          <ion-col size="4">
-            <img src="../../../assets/images/Ufavoursimages/Child.jpg" alt="">
-          </ion-col>
-          <ion-col size="8">
-            <h5 class="username">Stephen Messy</h5>
-            <p class="userdes">Software Engineer</p>
-            <p class="address">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet veniam facilis.</p>
-          </ion-col>
-        </ion-row>
-      </ion-card>
-
-      <ion-card>
-        <ion-row>
-          <ion-col size="4">
-            <img src="../../../assets/images/Ufavoursimages/Child.jpg" alt="">
-          </ion-col>
-          <ion-col size="8">
-            <h5 class="username">Stephen Messy</h5>
-            <p class="userdes">Software Engineer</p>
-            <p class="address">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet veniam facilis.</p>
-          </ion-col>
-        </ion-row>
-      </ion-card>
-
-      <ion-card>
-        <ion-row>
-          <ion-col size="4">
-            <img src="../../../assets/images/Ufavoursimages/Child.jpg" alt="">
-          </ion-col>
-          <ion-col size="8">
-            <h5 class="username">Stephen Messy</h5>
-            <p class="userdes">Software Engineer</p>
-            <p class="address">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet veniam facilis.</p>
+            <h5 class="username">{{list.name}}y</h5>
+            <p class="userdes">{{list.job}}</p>
+            <p class="address">{{list.task_details}}.</p>
           </ion-col>
         </ion-row>
       </ion-card>
     </ion-list>
 
     <ion-list *ngSwitchCase="'from'">
-      <ion-card>
+      <ion-card *ngFor="let list of requestFromMe">
         <ion-row routerLink="/tabs/tab4/timevalidation" routerDirection="forward">
           <ion-col size="4">
             <img src="../../../assets/images/Ufavoursimages/Child.jpg" alt="">
           </ion-col>
           <ion-col size="8">
-            <h5 class="username">Stephen Messy</h5>
-            <p class="userdes">Software Engineer</p>
-            <p class="address">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet veniam facilis.</p>
+            <h5 class="username">{{list.name}}</h5>
+            <p class="userdes">{{list.job}}</p>
+            <p class="address">{{list.task_details}}</p>
           </ion-col>
         </ion-row>
       </ion-card>
 
-      <ion-card>
-        <ion-row>
-          <ion-col size="4">
-            <img src="../../../assets/images/Ufavoursimages/Child.jpg" alt="">
-          </ion-col>
-          <ion-col size="8">
-            <h5 class="username">Stephen Messy</h5>
-            <p class="userdes">Software Engineer</p>
-            <p class="address">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet veniam facilis.</p>
-          </ion-col>
-        </ion-row>
-      </ion-card>
-
-      <ion-card>
-        <ion-row>
-          <ion-col size="4">
-            <img src="../../../assets/images/Ufavoursimages/Child.jpg" alt="">
-          </ion-col>
-          <ion-col size="8">
-            <h5 class="username">Stephen Messy</h5>
-            <p class="userdes">Software Engineer</p>
-            <p class="address">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet veniam facilis.</p>
-          </ion-col>
-        </ion-row>
-      </ion-card>
     </ion-list>
   </div>
 

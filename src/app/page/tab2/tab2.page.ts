@@ -2,13 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
 import { AlertController } from '@ionic/angular';
 import { HttpClientModule } from '@angular/common/http';
-import { Http, Response,Headers } from '@angular/http';
+import { Http, Response, Headers } from '@angular/http';
 import { ApiServiceService } from '../../api-service.service';
 import 'rxjs/add/operator/map';
 import 'rxjs/Rx';
 import { from } from 'rxjs';
-import { Console } from 'console';
-declare var google, map, infoWindow;
+// declare var google, map, infoWindow;
 
 @Component({
   selector: 'app-tab2',
@@ -16,9 +15,9 @@ declare var google, map, infoWindow;
   styleUrls: ['./tab2.page.scss'],
 })
 export class Tab2Page implements OnInit {
-  Skilllist:any = [];
+  Skilllist: any = [];
   createprofile = true
-  qualificationList: any =[];
+  qualificationList: any = [];
   fname: any;
   lname: any;
   skill: any;
@@ -33,16 +32,19 @@ export class Tab2Page implements OnInit {
     private http: Http,
     public api_service: ApiServiceService) { }
 
-  ngOnInit() {
+  ionViewDidEnter() {
     this.api_service.user.data
     this.getSkilllist();
     this.getQualification()
   }
+  ngOnInit() {
+
+  }
   onDone() {
     this.router.navigate(['/', 'profile'])
   }
-// skilllist
-  async getSkilllist(){
+  // skilllist
+  async getSkilllist() {
     let token = this.api_service.user.Token.token
     // console.log('token', token)
     let headers = new Headers();
@@ -54,7 +56,7 @@ export class Tab2Page implements OnInit {
       .map((response) => response.json())
       .subscribe((res) => {
         console.log(res);
-         this.Skilllist = res.data; 
+        this.Skilllist = res.data;
       },
         error => {
           console.log('here error', error);
@@ -62,7 +64,7 @@ export class Tab2Page implements OnInit {
   }
 
   // qualificationlist
-  async getQualification(){
+  async getQualification() {
     var token = this.api_service.user.Token.token
     let headers = new Headers();
     headers.append("Content-Type", "application/json");
@@ -73,7 +75,7 @@ export class Tab2Page implements OnInit {
       .map((response) => response.json())
       .subscribe((res) => {
         console.log(res);
-         this.qualificationList = res.data; 
+        this.qualificationList = res.data;
       },
         error => {
           console.log('here error', error);
@@ -83,23 +85,23 @@ export class Tab2Page implements OnInit {
   // updateprofile
   async onUpdate() {
     let token = await this.api_service.user.Token.token;
-    token = "Bearer "+token;
+    token = "Bearer " + token;
     let headers = new Headers();
     headers.append("Content-Type", "application/json");
     headers.append("Authorization", token);
-    let options:any = {headers:headers};
+    let options: any = { headers: headers };
 
-    if (this.fname && this.lname && this.skill && this.job && this.city && this.pincode && this.qualification ) {
+    if (this.fname && this.lname && this.skill && this.job && this.city && this.pincode && this.qualification) {
       let userObj = {
         fname: this.fname,
         lname: this.lname,
         skill: this.skill,
         job: this.job,
         city: this.city,
-        pincode:this.pincode,
+        pincode: this.pincode,
         qualification: this.qualification
-      }  
-      
+      }
+
       this.http.post(this.api_service.API_BASE + 'api/update_profile', userObj, options)
         .map((response) => response.json())
         .subscribe((data) => {
@@ -121,11 +123,11 @@ export class Tab2Page implements OnInit {
       })
       await alert.present();
     }
-  
+
   }
 
 
-  async getUserData(u:any) {
+  async getUserData(u: any) {
     this.api_service.user.data = u.data;
     console.log("here check", u.data);
     this.api_service.updateUser();
@@ -138,6 +140,6 @@ export class Tab2Page implements OnInit {
       ]
     })
     await alert.present();
-   this.createprofile= false
+    this.createprofile = false
   }
 }
