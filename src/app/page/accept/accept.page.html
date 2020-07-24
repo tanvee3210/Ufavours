@@ -40,7 +40,8 @@
         <ion-button expand="block" (click)="onTime()" class="time">Propose New Time</ion-button>
       </ion-col>
       <ion-col size="6">
-        <ion-button expand="block" routerLink="/tabs/tab2/profile/accept/review" class="feedback">Decline Time Feedback
+        <ion-button expand="block" (click)="onDecline()" class="feedback">
+          Decline Time Feedback
         </ion-button>
       </ion-col>
     </ion-row>
