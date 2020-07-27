@@ -127,7 +127,7 @@
   
       <ion-row>
         <ion-card class="cards">
-          <h5 class="username">Stephen Messy</h5>
+          <h5 class="username">{{userdetailes.data.name}}</h5>
           <p class="userdes">Software Engineer</p>
           <p class="address">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet veniam facilis.</p>
         </ion-card>
@@ -136,12 +136,12 @@
       <div padding class="div33">
         <ion-item
           style="border-radius: 5px; margin-left: 10px; margin-right: 10px;    border: 1px solid lightgrey; height: 45px; margin-top: 10px;">
-          <ion-input type="text" placeholder="Name"></ion-input>
+          <ion-input type="text" [(ngModel)]="data" placeholder="Name"></ion-input>
         </ion-item>
         <br>
         <ion-item
           style="border-radius: 5px; margin-left: 10px; margin-right: 10px;    border: 1px solid lightgrey; height: 45px; bottom: 15px;">
-          <ion-input type="text" placeholder="Job title"></ion-input>
+          <ion-input type="text" ng  placeholder="Job title"></ion-input>
         </ion-item>
         <br>
         <ion-item
@@ -180,11 +180,11 @@
       </div>
     </div>
     <div padding>
-      <ion-button expand="block" class="message" routerLink="/tabs/tab2/profile/message" routerDirection="forward">Message
+      <ion-button expand="block" class="message" (click)="validation('message')"  routerDirection="forward">Message
       </ion-button>
     </div>
     <div padding>
-      <ion-button expand="block" routerLink="/tabs/tab2/profile/timevalidation" class="time">Time Validation</ion-button>
+      <ion-button expand="block" (click)="validation('validation')" class="time">Time Validation</ion-button>
     </div>
     <div padding>
       <ion-button expand="block" class="time" (click)="onLogout()">Logout</ion-button>

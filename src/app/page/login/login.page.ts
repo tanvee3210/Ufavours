@@ -32,6 +32,7 @@ export class LoginPage implements OnInit {
   }
 
   async onLogin() {
+    debugger
     if (this.email && this.password) {
       this.forloginuser = {
         email: this.email,

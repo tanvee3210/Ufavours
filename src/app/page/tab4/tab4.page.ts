@@ -25,7 +25,7 @@ export class Tab4Page implements OnInit {
 
   ionViewDidEnter() {
     this.getRequestForme()
-    this.getRequestForme()
+    this.getRequestFromme()
   }
 
   ngOnInit() {

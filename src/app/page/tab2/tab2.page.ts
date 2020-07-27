@@ -37,9 +37,31 @@ export class Tab2Page implements OnInit {
     this.getSkilllist();
     this.getQualification()
   }
+  userdetailes: any
+  data: any ={}
   ngOnInit() {
-
+    this.userdetailes = JSON.parse(localStorage.getItem("userDetails"))
+    this.data = this.userdetailes.data.name
+    this.showdata()
+    debugger
   }
+
+  showdata() {
+    if (this.userdetailes.data.name) {
+      this.createprofile = false
+    } else {
+      this.createprofile = true
+    }
+  }
+
+  validation(text){
+    if(text == "validation"){
+      this.router.navigate(['/', 'timevalidation'])
+    } else{
+      this.router.navigate(['/', 'message'])
+    }
+  }
+
   onDone() {
     this.router.navigate(['/', 'profile'])
   }
@@ -80,6 +102,12 @@ export class Tab2Page implements OnInit {
         error => {
           console.log('here error', error);
         });
+  }
+
+
+  onLogout() {
+    localStorage.clear()
+    this.router.navigate(['/', 'login'])
   }
 
   // updateprofile
