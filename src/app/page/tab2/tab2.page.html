@@ -25,7 +25,7 @@
       <!-- <ion-input type="password" placeholder="Skill Catagory(s) "></ion-input> -->
       <ion-label>Skills</ion-label>
       <ion-select value="" [(ngModel)]="skill">
-        <ion-select-option value="list"  *ngFor="let list of Skilllist">{{list.skill_name}}</ion-select-option>
+        <ion-select-option value="list" *ngFor="let list of Skilllist">{{list.skill_name}}</ion-select-option>
       </ion-select>
     </ion-item>
     <br>
@@ -74,7 +74,7 @@
   </div>
   <div padding>
     <!-- <ion-button expand="block" (click)="onDone()">Done</ion-button> -->
-    <ion-button expand="block" (click)="onUpdate()"  routerDirection="forward">Done</ion-button>
+    <ion-button expand="block" (click)="onUpdate()" routerDirection="forward">Done</ion-button>
   </div>
 </ion-content>
 
@@ -88,7 +88,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content *ngIf="!createprofile">  
+<ion-content *ngIf="!createprofile">
   <ion-content>
     <ion-row>
       <ion-searchbar></ion-searchbar>
@@ -115,16 +115,16 @@
           </ion-row>
         </ion-col>
       </ion-row>
-  
+
       <ion-row>
         <ion-col size="4">
-          <ion-button size="small" class="edit">🖉 Edit Profile</ion-button>
+          <ion-button size="small" (click)="openCameraOption()" class="edit">🖉 Edit Profile</ion-button>
         </ion-col>
         <ion-col size="8">
           <!-- blank -->
         </ion-col>
       </ion-row>
-  
+
       <ion-row>
         <ion-card class="cards">
           <h5 class="username">{{userdetailes.data.name}}</h5>
@@ -132,7 +132,7 @@
           <p class="address">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet veniam facilis.</p>
         </ion-card>
       </ion-row>
-  
+
       <div padding class="div33">
         <ion-item
           style="border-radius: 5px; margin-left: 10px; margin-right: 10px;    border: 1px solid lightgrey; height: 45px; margin-top: 10px;">
@@ -141,7 +141,7 @@
         <br>
         <ion-item
           style="border-radius: 5px; margin-left: 10px; margin-right: 10px;    border: 1px solid lightgrey; height: 45px; bottom: 15px;">
-          <ion-input type="text" ng  placeholder="Job title"></ion-input>
+          <ion-input type="text" ng placeholder="Job title"></ion-input>
         </ion-item>
         <br>
         <ion-item
@@ -180,7 +180,7 @@
       </div>
     </div>
     <div padding>
-      <ion-button expand="block" class="message" (click)="validation('message')"  routerDirection="forward">Message
+      <ion-button expand="block" class="message" (click)="validation('message')" routerDirection="forward">Message
       </ion-button>
     </div>
     <div padding>
