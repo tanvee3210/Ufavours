@@ -241,7 +241,7 @@ export class Tab2Page implements OnInit {
         city: this.city,
         pincode: this.pincode,
         qualification: this.qualification,
-        imgToUpload: this.imgToUpload
+        picture: this.imgToUpload
 
       }
 
