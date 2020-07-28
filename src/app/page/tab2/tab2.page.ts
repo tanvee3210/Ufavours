@@ -240,7 +240,9 @@ export class Tab2Page implements OnInit {
         job: this.job,
         city: this.city,
         pincode: this.pincode,
-        qualification: this.qualification
+        qualification: this.qualification,
+        imgToUpload: this.imgToUpload
+
       }
 
       this.http.post(this.api_service.API_BASE + 'api/update_profile', userObj, options)
