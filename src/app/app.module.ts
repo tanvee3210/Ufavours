@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { HttpModule } from '@angular/http'
 import { ApiServiceService } from './api-service.service';
 import { TabsService } from './tabs.service';
+import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
 //import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 @NgModule({
   declarations: [AppComponent],
@@ -19,6 +20,7 @@ import { TabsService } from './tabs.service';
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule, HttpModule,],
   providers: [
     StatusBar,
+    Camera,
     TabsService,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy, },
