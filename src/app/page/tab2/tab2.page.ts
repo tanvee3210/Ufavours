@@ -39,28 +39,25 @@ export class Tab2Page implements OnInit {
     public api_service: ApiServiceService) { }
 
   ionViewDidEnter() {
-
-    this.api_service.user.data
-    this.getSkilllist();
-    this.getQualification()
-  }
-
-  ngOnInit() {
-
     this.userdetailes = JSON.parse(localStorage.getItem("userDetails"))
-    this.data = this.userdetailes.data.name
-    this.showdata()
-  }
-
-  showdata() {
-    if (this.userdetailes.data.name) {
+    if (this.userdetailes.data) {
+      this.data = this.userdetailes && this.userdetailes.data && this.userdetailes.data.name
       this.createprofile = false
+      this.getSkilllist();
+      this.getQualification()
+      this.api_service.user.token
+      debugger
     } else {
       this.createprofile = true
+      this.getSkilllist();
+      this.getQualification()
+      this.api_service.user.token
+      debugger
     }
   }
+  ngOnInit() {
 
-
+  }
   async openCameraOption() {
     let alert = await this.alertCtrl.create({
       header: " Select Image",
@@ -182,7 +179,7 @@ export class Tab2Page implements OnInit {
   }
   // skilllist
   async getSkilllist() {
-    let token = this.api_service.user.Token.token
+    let token = this.api_service.user.token
     // console.log('token', token)
     let headers = new Headers();
     headers.append("Content-Type", "application/json");
@@ -194,6 +191,7 @@ export class Tab2Page implements OnInit {
       .subscribe((res) => {
         console.log(res);
         this.Skilllist = res.data;
+        debugger
       },
         error => {
           console.log('here error', error);
@@ -202,7 +200,7 @@ export class Tab2Page implements OnInit {
 
   // qualificationlist
   async getQualification() {
-    var token = this.api_service.user.Token.token
+    var token = this.api_service.user.token
     let headers = new Headers();
     headers.append("Content-Type", "application/json");
     headers.append("Authorization", "Bearer " + token);
@@ -227,7 +225,7 @@ export class Tab2Page implements OnInit {
 
   // updateprofile
   async onUpdate() {
-    let token = await this.api_service.user.Token.token;
+    let token = await this.api_service.user.token;
     token = "Bearer " + token;
     let headers = new Headers();
     headers.append("Content-Type", "application/json");
