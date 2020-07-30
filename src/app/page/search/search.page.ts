@@ -1,5 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, NgZone } from '@angular/core';
 import { Router } from "@angular/router";
+import { AlertController } from '@ionic/angular';
+import { HttpClientModule } from '@angular/common/http';
+import { Http, Response, Headers } from '@angular/http';
+import { ApiServiceService } from '../../api-service.service';
+import 'rxjs/add/operator/map';
+import 'rxjs/Rx';
+import { from } from 'rxjs';
 @Component({
   selector: 'app-search',
   templateUrl: './search.page.html',
@@ -7,7 +14,11 @@ import { Router } from "@angular/router";
 })
 export class SearchPage implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router,
+    public alertCtrl: AlertController,
+    private http: Http,
+    private _ngZone: NgZone,
+    public api_service: ApiServiceService) { }
 
   ngOnInit() {
   }

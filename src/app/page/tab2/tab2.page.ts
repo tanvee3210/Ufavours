@@ -46,13 +46,12 @@ export class Tab2Page implements OnInit {
       this.getSkilllist();
       this.getQualification()
       this.api_service.user.token
-      debugger
     } else {
       this.createprofile = true
       this.getSkilllist();
       this.getQualification()
       this.api_service.user.token
-      debugger
+
     }
   }
   ngOnInit() {
@@ -191,7 +190,7 @@ export class Tab2Page implements OnInit {
       .subscribe((res) => {
         console.log(res);
         this.Skilllist = res.data;
-        debugger
+
       },
         error => {
           console.log('here error', error);
