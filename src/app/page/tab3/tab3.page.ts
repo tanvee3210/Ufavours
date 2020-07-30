@@ -37,7 +37,7 @@ export class Tab3Page implements OnInit {
   ngOnInit() {
 
   }
-  onFilter() {
+  onSearch() {
     this.router.navigate(['/', 'search'])
   }
 

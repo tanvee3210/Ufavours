@@ -20,7 +20,10 @@
           <ion-item style="--background: transparent; --border-color: white;">
             <ion-icon name="lock-open-outline"></ion-icon>&nbsp;
             <ion-input type={{inputpassword}} [(ngModel)]="password" placeholder="Password"></ion-input>
+            <ion-icon name="eye-off" *ngIf="hideicon" (click)="showicon()" class="look-icon"></ion-icon>
+            <ion-icon name="eye" *ngIf="!hideicon" (click)="againhideicon()" class="look-icon"></ion-icon>
           </ion-item>
+
           <p class="forget">Forgot your Password?</p>
         </div>
 

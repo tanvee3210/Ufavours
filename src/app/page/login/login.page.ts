@@ -16,10 +16,12 @@ declare var google, map, infoWindow;
 })
 export class LoginPage implements OnInit {
   email: any
-  password: any 
-  getLogin:any
+  password: any
+  getLogin: any
   forloginuser: any
-  
+  hideicon = true;
+  inputpassword = 'password';
+
   constructor(private router: Router,
     public alertCtrl: AlertController,
     private http: Http,
@@ -70,10 +72,21 @@ export class LoginPage implements OnInit {
   }
 
 
-  async getloginuser(u:any) {
+  async getloginuser(u: any) {
     this.api_service.user = u;
     console.log("here check", u);
     this.api_service.updateUser();
     this.router.navigate(['/', 'tab2'])
+  }
+
+  showicon() {
+    this.hideicon = false
+    this.inputpassword = 'text'
+  }
+  againhideicon() {
+    this.hideicon = true
+
+    this.inputpassword = 'password'
+
   }
 }
