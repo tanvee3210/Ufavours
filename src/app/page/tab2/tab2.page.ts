@@ -220,9 +220,26 @@ export class Tab2Page implements OnInit {
   }
 
 
-  onLogout() {
-    localStorage.clear()
-    this.router.navigate(['/', 'login'])
+  async onLogout() {
+    // localStorage.clear()
+    // this.router.navigate(['/', 'login'])
+    const alert = await this.alertCtrl.create({
+      message: "Do you really want to logout ?",
+      buttons: [
+        {
+          text: "YES",
+          handler: data => {
+            this.router.navigate(['/', 'login'])
+            localStorage.clear();
+            // this.api_service.toaster('logout successfully')
+          }
+        },
+        {
+          text: "NO"
+        }
+      ]
+    });
+    await alert.present();
   }
 
   // updateprofile
