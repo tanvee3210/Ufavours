@@ -47,10 +47,6 @@ const routes: Routes = [
     loadChildren: () => import('./page/intro/intro.module').then(m => m.IntroPageModule)
   },
   {
-    path: 'profile',
-    loadChildren: () => import('./page/profile/profile.module').then(m => m.ProfilePageModule)
-  },
-  {
     path: 'timevalidation',
     loadChildren: () => import('./page/timevalidation/timevalidation.module').then(m => m.TimevalidationPageModule)
   },
@@ -68,7 +64,11 @@ const routes: Routes = [
   },
   {
     path: 'review',
-    loadChildren: () => import('./page/review/review.module').then( m => m.ReviewPageModule)
+    loadChildren: () => import('./page/review/review.module').then(m => m.ReviewPageModule)
+  },
+  {
+    path: 'forgotpassword',
+    loadChildren: () => import('./page/forgotpassword/forgotpassword.module').then( m => m.ForgotpasswordPageModule)
   }
 ];
 @NgModule({

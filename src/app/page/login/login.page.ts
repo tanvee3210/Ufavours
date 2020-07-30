@@ -32,7 +32,9 @@ export class LoginPage implements OnInit {
   onSignup() {
     this.router.navigate(['/', 'registration'])
   }
-
+  onForgots() {
+    this.router.navigate(['/', 'forgotpassword'])
+  }
   async onLogin() {
     debugger
     if (this.email && this.password) {

@@ -28,7 +28,9 @@ export class Tab2Page implements OnInit {
   qualification: any;
   getcreateProfile: any;
   imgToUpload: any;
-
+  _isMobileDevice = true;
+  userdetailes: any
+  data: any = {}
   constructor(private router: Router,
     public alertCtrl: AlertController,
     private http: Http,
@@ -37,17 +39,17 @@ export class Tab2Page implements OnInit {
     public api_service: ApiServiceService) { }
 
   ionViewDidEnter() {
+
     this.api_service.user.data
     this.getSkilllist();
     this.getQualification()
   }
-  userdetailes: any
-  data: any = {}
+
   ngOnInit() {
+
     this.userdetailes = JSON.parse(localStorage.getItem("userDetails"))
     this.data = this.userdetailes.data.name
     this.showdata()
-    debugger
   }
 
   showdata() {
@@ -99,7 +101,7 @@ export class Tab2Page implements OnInit {
     await alert.present();
   }
 
-  _isMobileDevice = true;
+
   isMobileDevice() {
     return this._isMobileDevice;
   }
