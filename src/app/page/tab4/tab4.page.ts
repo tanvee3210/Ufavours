@@ -37,6 +37,7 @@ export class Tab4Page implements OnInit {
 
   // RequestForMe
   async getRequestForme() {
+    debugger
     let token = this.api_service.user.Token.token
     // console.log('token', token)
     let headers = new Headers();

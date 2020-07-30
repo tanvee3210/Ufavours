@@ -31,6 +31,7 @@ export class Tab2Page implements OnInit {
   _isMobileDevice = true;
   userdetailes: any
   data: any = {}
+  usertoken: any
   constructor(private router: Router,
     public alertCtrl: AlertController,
     private http: Http,
@@ -42,11 +43,13 @@ export class Tab2Page implements OnInit {
     this.userdetailes = JSON.parse(localStorage.getItem("userDetails"))
     if (this.userdetailes.data) {
       this.data = this.userdetailes && this.userdetailes.data && this.userdetailes.data.name
+      this.usertoken = this.userdetailes.Token.token
       this.createprofile = false
       this.getSkilllist();
       this.getQualification()
       this.api_service.user.token
     } else {
+      this.usertoken = this.userdetailes.token
       this.createprofile = true
       this.getSkilllist();
       this.getQualification()
@@ -178,7 +181,7 @@ export class Tab2Page implements OnInit {
   }
   // skilllist
   async getSkilllist() {
-    let token = this.api_service.user.token
+    let token = this.usertoken
     // console.log('token', token)
     let headers = new Headers();
     headers.append("Content-Type", "application/json");
@@ -199,7 +202,8 @@ export class Tab2Page implements OnInit {
 
   // qualificationlist
   async getQualification() {
-    var token = this.api_service.user.token
+    var token = this.usertoken
+    debugger
     let headers = new Headers();
     headers.append("Content-Type", "application/json");
     headers.append("Authorization", "Bearer " + token);
@@ -241,7 +245,7 @@ export class Tab2Page implements OnInit {
 
   // updateprofile
   async onUpdate() {
-    let token = await this.api_service.user.token;
+    let token = this.usertoken;
     token = "Bearer " + token;
     let headers = new Headers();
     headers.append("Content-Type", "application/json");
