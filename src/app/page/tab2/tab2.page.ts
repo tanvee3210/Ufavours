@@ -179,6 +179,8 @@ export class Tab2Page implements OnInit {
   onDone() {
     this.router.navigate(['/', 'profile'])
   }
+
+
   // skilllist
   async getSkilllist() {
     let token = this.usertoken
@@ -203,7 +205,6 @@ export class Tab2Page implements OnInit {
   // qualificationlist
   async getQualification() {
     var token = this.usertoken
-    debugger
     let headers = new Headers();
     headers.append("Content-Type", "application/json");
     headers.append("Authorization", "Bearer " + token);

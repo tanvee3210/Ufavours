@@ -76,7 +76,7 @@ export class RegistrationPage implements OnInit {
     element.classList.remove("add-class");
   }
 
-  async  ValidateEmail(mail) {
+  async ValidateEmail(mail) {
     if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)) {
       //if (this.newpassword.toString().length == "6") {
       if (this.newpassword === this.confirmpassword) {
@@ -146,7 +146,6 @@ export class RegistrationPage implements OnInit {
 
   async userregister(data) {
     await this.api_service.hideLoader();
-    debugger
     localStorage.setItem('userDetails', JSON.stringify(data.data));
     this.router.navigate(['/', 'tab2'])
   }

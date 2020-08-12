@@ -15,6 +15,6 @@ export class AcceptPage implements OnInit {
     this.router.navigate(['/', 'tab4'])
   }
   onDecline() {
-    this.router.navigate(['/', 'review'])
+    this.router.navigate(['/', 'feedback'])
   }
 }

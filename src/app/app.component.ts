@@ -11,6 +11,7 @@ import { TabsService } from './tabs.service';
   styleUrls: ['app.component.scss']
 })
 export class AppComponent {
+  //hideTabs: any = true;
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
@@ -18,6 +19,9 @@ export class AppComponent {
     public tabs: TabsService
   ) {
     this.initializeApp();
+  }
+  ionViewDidEnter() {
+    console.log("View Enter", this.tabs.showGlobalTabs);
   }
 
   initializeApp() {

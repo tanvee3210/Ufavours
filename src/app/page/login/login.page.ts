@@ -36,7 +36,6 @@ export class LoginPage implements OnInit {
     this.router.navigate(['/', 'forgotpassword'])
   }
   async onLogin() {
-    debugger
     if (this.email && this.password) {
       this.forloginuser = {
         email: this.email,

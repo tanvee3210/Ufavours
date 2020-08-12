@@ -69,6 +69,34 @@ const routes: Routes = [
   {
     path: 'forgotpassword',
     loadChildren: () => import('./page/forgotpassword/forgotpassword.module').then( m => m.ForgotpasswordPageModule)
+  },
+  {
+    path: 'feedback',
+    loadChildren: () => import('./page/feedback/feedback.module').then( m => m.FeedbackPageModule)
+  },
+  {
+    path: 'report',
+    loadChildren: () => import('./page/report/report.module').then( m => m.ReportPageModule)
+  },
+  {
+    path: 'concern',
+    loadChildren: () => import('./page/concern/concern.module').then( m => m.ConcernPageModule)
+  },
+  {
+    path: 'faq',
+    loadChildren: () => import('./page/faq/faq.module').then( m => m.FaqPageModule)
+  },
+  {
+    path: 'howtouseapp',
+    loadChildren: () => import('./page/howtouseapp/howtouseapp.module').then( m => m.HowtouseappPageModule)
+  },
+  {
+    path: 'othersprofile',
+    loadChildren: () => import('./page/othersprofile/othersprofile.module').then( m => m.OthersprofilePageModule)
+  },
+  {
+    path: 'skillcategory',
+    loadChildren: () => import('./page/skillcategory/skillcategory.module').then( m => m.SkillcategoryPageModule)
   }
 ];
 @NgModule({
