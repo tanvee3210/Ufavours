@@ -40,7 +40,9 @@ export class Tab3Page implements OnInit {
   onSearch() {
     this.router.navigate(['/', 'search'])
   }
-
+  onskillCategory() {
+    this.router.navigate(['/', 'skillcategory'])
+  }
 
   sliderImages1 = [
     {

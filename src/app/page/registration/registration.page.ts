@@ -43,29 +43,7 @@ export class RegistrationPage implements OnInit {
 
   ngOnInit() {
   }
-  // onSignup() {
 
-  //   this.router.navigateByUrl('tabs');
-  // }
-
-
-  async onSignup() {
-    if (this.username && this.newemail && this.newpassword && this.confirmpassword) {
-      this.ValidateEmail(this.newemail)
-    } else {
-      const alert = await this.alertCtrl.create({
-        message: "All Feilds are mandatory.",
-        buttons: [
-          {
-            text: "OK"
-          }
-        ]
-      })
-      await alert.present();
-    }
-  }
-
-  // new user function
   Newuser() {
     this.newuser = false
     var element = document.getElementById("newuser");
@@ -74,6 +52,22 @@ export class RegistrationPage implements OnInit {
     element.classList.add("ortextmargin");
     var element = document.getElementById("olduser");
     element.classList.remove("add-class");
+  }
+  async onSignup() {
+
+    if (this.username && this.newemail && this.newpassword && this.confirmpassword) {
+      this.ValidateEmail(this.newemail)
+    } else {
+      const alert = await this.alertCtrl.create({
+        message: "All fields are mandatory.",
+        buttons: [
+          {
+            text: "OK"
+          }
+        ]
+      })
+      await alert.present();
+    }
   }
 
   async ValidateEmail(mail) {
@@ -97,7 +91,7 @@ export class RegistrationPage implements OnInit {
             })
       } else {
         const alert = await this.alertCtrl.create({
-          message: "Both Password are not same.",
+          message: "Both password are not same.",
           buttons: [
             {
               text: "OK"
@@ -106,21 +100,10 @@ export class RegistrationPage implements OnInit {
         })
         await alert.present();
       }
-      // } 
-      // else {
-      //   const alert = await this.alertCtrl.create({
-      //     message: "Password at least minimum 6 characters",
-      //     buttons: [
-      //       {
-      //         text: "OK"
-      //       }
-      //     ]
-      //   })
-      //   await alert.present();
-      // }
+
     } else {
       const alert = await this.alertCtrl.create({
-        message: "please enter valid gamil address",
+        message: "Please enter valid email address",
         buttons: [
           {
             text: "OK"
@@ -132,8 +115,9 @@ export class RegistrationPage implements OnInit {
   }
 
   async texterror() {
+    await this.api_service.hideLoader();
     const alert = await this.alertCtrl.create({
-      message: "this email id is all ready register",
+      message: "This email id is already register",
       buttons: [
         {
           text: "OK"
@@ -145,14 +129,10 @@ export class RegistrationPage implements OnInit {
   }
 
   async userregister(data) {
-    await this.api_service.hideLoader();
+
     localStorage.setItem('userDetails', JSON.stringify(data.data));
     this.router.navigate(['/', 'tab2'])
   }
-
-
-
-
 
   showicon(data) {
     if (data == "1") {

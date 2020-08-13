@@ -60,6 +60,9 @@ export class Tab2Page implements OnInit {
   ngOnInit() {
 
   }
+  onEdit() {
+    this.createprofile = true
+  }
   async openCameraOption() {
     let alert = await this.alertCtrl.create({
       header: " Select Image",
@@ -278,7 +281,7 @@ export class Tab2Page implements OnInit {
     }
     else {
       const alert = await this.alertCtrl.create({
-        message: "All Fields are required ",
+        message: "All fields are mandatory",
         buttons: [
           {
             text: "OK"

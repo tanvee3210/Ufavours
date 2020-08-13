@@ -1,19 +1,19 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { AcceptPage } from './accept.page';
+import { TimeValidationRequestPage } from './time-validation-request.page';
 
-describe('AcceptPage', () => {
-  let component: AcceptPage;
-  let fixture: ComponentFixture<AcceptPage>;
+describe('TimeValidationRequestPage', () => {
+  let component: TimeValidationRequestPage;
+  let fixture: ComponentFixture<TimeValidationRequestPage>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AcceptPage ],
+      declarations: [ TimeValidationRequestPage ],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(AcceptPage);
+    fixture = TestBed.createComponent(TimeValidationRequestPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));

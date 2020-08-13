@@ -32,7 +32,10 @@ export class Tab4Page implements OnInit {
 
   }
   onAcceptRequest() {
-    this.router.navigate(['/', 'accept'])
+    this.router.navigate(['/', 'time-validation-accept'])
+  }
+  onRequestFromMe() {
+    this.router.navigate(['/', 'othersprofile'])
   }
 
   // RequestForMe

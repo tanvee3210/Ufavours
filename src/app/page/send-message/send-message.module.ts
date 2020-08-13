@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { AcceptPageRoutingModule } from './accept-routing.module';
+import { SendMessagePageRoutingModule } from './send-message-routing.module';
 
-import { AcceptPage } from './accept.page';
+import { SendMessagePage } from './send-message.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    AcceptPageRoutingModule
+    SendMessagePageRoutingModule
   ],
-  declarations: [AcceptPage]
+  declarations: [SendMessagePage]
 })
-export class AcceptPageModule {}
+export class SendMessagePageModule {}

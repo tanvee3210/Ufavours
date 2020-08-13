@@ -47,16 +47,8 @@ const routes: Routes = [
     loadChildren: () => import('./page/intro/intro.module').then(m => m.IntroPageModule)
   },
   {
-    path: 'timevalidation',
-    loadChildren: () => import('./page/timevalidation/timevalidation.module').then(m => m.TimevalidationPageModule)
-  },
-  {
     path: 'notification',
     loadChildren: () => import('./page/notification/notification.module').then(m => m.NotificationPageModule)
-  },
-  {
-    path: 'accept',
-    loadChildren: () => import('./page/accept/accept.module').then(m => m.AcceptPageModule)
   },
   {
     path: 'search',
@@ -68,35 +60,47 @@ const routes: Routes = [
   },
   {
     path: 'forgotpassword',
-    loadChildren: () => import('./page/forgotpassword/forgotpassword.module').then( m => m.ForgotpasswordPageModule)
+    loadChildren: () => import('./page/forgotpassword/forgotpassword.module').then(m => m.ForgotpasswordPageModule)
   },
   {
     path: 'feedback',
-    loadChildren: () => import('./page/feedback/feedback.module').then( m => m.FeedbackPageModule)
+    loadChildren: () => import('./page/feedback/feedback.module').then(m => m.FeedbackPageModule)
   },
   {
     path: 'report',
-    loadChildren: () => import('./page/report/report.module').then( m => m.ReportPageModule)
+    loadChildren: () => import('./page/report/report.module').then(m => m.ReportPageModule)
   },
   {
     path: 'concern',
-    loadChildren: () => import('./page/concern/concern.module').then( m => m.ConcernPageModule)
+    loadChildren: () => import('./page/concern/concern.module').then(m => m.ConcernPageModule)
   },
   {
     path: 'faq',
-    loadChildren: () => import('./page/faq/faq.module').then( m => m.FaqPageModule)
+    loadChildren: () => import('./page/faq/faq.module').then(m => m.FaqPageModule)
   },
   {
     path: 'howtouseapp',
-    loadChildren: () => import('./page/howtouseapp/howtouseapp.module').then( m => m.HowtouseappPageModule)
+    loadChildren: () => import('./page/howtouseapp/howtouseapp.module').then(m => m.HowtouseappPageModule)
   },
   {
     path: 'othersprofile',
-    loadChildren: () => import('./page/othersprofile/othersprofile.module').then( m => m.OthersprofilePageModule)
+    loadChildren: () => import('./page/othersprofile/othersprofile.module').then(m => m.OthersprofilePageModule)
   },
   {
     path: 'skillcategory',
-    loadChildren: () => import('./page/skillcategory/skillcategory.module').then( m => m.SkillcategoryPageModule)
+    loadChildren: () => import('./page/skillcategory/skillcategory.module').then(m => m.SkillcategoryPageModule)
+  },
+  {
+    path: 'time-validation-accept',
+    loadChildren: () => import('./page/time-validation-accept/time-validation-accept.module').then(m => m.TimeValidationAcceptPageModule)
+  },
+  {
+    path: 'time-validation-request',
+    loadChildren: () => import('./page/time-validation-request/time-validation-request.module').then(m => m.TimeValidationRequestPageModule)
+  },
+  {
+    path: 'send-message',
+    loadChildren: () => import('./page/send-message/send-message.module').then( m => m.SendMessagePageModule)
   }
 ];
 @NgModule({

@@ -14,7 +14,7 @@
   </ion-row>
 
   <ion-row class="sliders">
-    <ion-slides class="slides" [options]="slideOpts1">
+    <ion-slides class="slides" [options]="slideOpts1" (click)="onskillCategory()">
       <ion-slide class="ion-slide" *ngFor="let list of sliderImages1">
         <ion-avatar>
           <img src="{{list.img}}" (click)="sliderGo(list)">

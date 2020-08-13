@@ -11,17 +11,15 @@
   </div>
   <div class="div3">
     <ion-item
-      style="border-radius: 5px; margin-left: 10px; margin-right: 10px;    border: 1px solid lightgrey; height: 45px; margin-top: 10px;">
+      style="border-radius: 5px; margin-left: 10px; margin-right: 10px;    border: 1px solid lightgrey; margin-top: 10px;">
       <ion-input type="text" placeholder="First name" [(ngModel)]="fname"></ion-input>
     </ion-item>
     <br>
-    <ion-item
-      style="border-radius: 5px; margin-left: 10px; margin-right: 10px;    border: 1px solid lightgrey; height: 45px;bottom: 15px;">
+    <ion-item style="border-radius: 5px; margin-left: 10px; margin-right: 10px;    border: 1px solid lightgrey;">
       <ion-input type="text" placeholder="Last name" [(ngModel)]="lname"></ion-input>
     </ion-item>
     <br>
-    <ion-item
-      style="border-radius: 5px; margin-left: 10px; margin-right: 10px;    border: 1px solid lightgrey; height: 45px;bottom: 30px;">
+    <ion-item style="border-radius: 5px; margin-left: 10px; margin-right: 10px;    border: 1px solid lightgrey;">
       <!-- <ion-input type="password" placeholder="Skill Catagory(s) "></ion-input> -->
       <ion-label>Skills</ion-label>
       <ion-select value="" [(ngModel)]="skill">
@@ -29,18 +27,15 @@
       </ion-select>
     </ion-item>
     <br>
-    <ion-item
-      style="border-radius: 5px; margin-left: 10px; margin-right: 10px;    border: 1px solid lightgrey; height: 45px;bottom: 45px;">
+    <ion-item style="border-radius: 5px; margin-left: 10px; margin-right: 10px;    border: 1px solid lightgrey;">
       <ion-input type="text" placeholder="Current job title" [(ngModel)]="job"></ion-input>
     </ion-item>
     <br>
-    <ion-item
-      style="border-radius: 5px; margin-left: 10px; margin-right: 10px;    border: 1px solid lightgrey; height: 45px;bottom: 55px;">
+    <ion-item style="border-radius: 5px; margin-left: 10px; margin-right: 10px;    border: 1px solid lightgrey;">
       <ion-input type="text" placeholder="Town" [(ngModel)]="city"></ion-input>
     </ion-item>
     <br>
-    <ion-item
-      style="border-radius: 5px; margin-left: 10px; margin-right: 10px;    border: 1px solid lightgrey; height: 45px;bottom: 65px;">
+    <ion-item style="border-radius: 5px; margin-left: 10px; margin-right: 10px;    border: 1px solid lightgrey;">
       <ion-input type="text" placeholder="Postcode" [(ngModel)]="pincode"></ion-input>
     </ion-item>
   </div>
@@ -51,7 +46,7 @@
 
   <div class="div3">
     <ion-item
-      style="border-radius: 5px; margin-left: 10px; margin-right: 10px;    border: 1px solid lightgrey; height: 45px; margin-top: 10px;">
+      style="border-radius: 5px; margin-left: 10px; margin-right: 10px;    border: 1px solid lightgrey; margin-top: 10px;">
       <!-- <ion-input type="password" placeholder="Qualifications/certifications"></ion-input> -->
       <ion-label>Qualifications/certifications</ion-label>
       <ion-select value="list" [(ngModel)]="qualification">
@@ -59,8 +54,7 @@
       </ion-select>
     </ion-item>
     <br>
-    <ion-item
-      style="border-radius: 5px; margin-left: 10px; margin-right: 10px;    border: 1px solid lightgrey; height: 45px;bottom: 15px;">
+    <ion-item style="border-radius: 5px; margin-left: 10px; margin-right: 10px;    border: 1px solid lightgrey;">
       <!-- <ion-input type="password" placeholder="Experience/employment history"></ion-input> -->
       <ion-label>Other Favours</ion-label>
       <ion-select value="dog">
@@ -118,7 +112,7 @@
 
       <ion-row>
         <ion-col size="4">
-          <ion-button size="small" (click)="openCameraOption()" class="edit">🖉 Edit Profile</ion-button>
+          <ion-button size="small" (click)="onEdit()" class="edit">🖉 Edit Profile</ion-button>
         </ion-col>
         <ion-col size="8">
           <!-- blank -->
@@ -135,22 +129,19 @@
 
       <div padding class="div33">
         <ion-item
-          style="border-radius: 5px; margin-left: 10px; margin-right: 10px;    border: 1px solid lightgrey; height: 45px; margin-top: 10px;">
+          style="border-radius: 5px; margin-left: 10px; margin-right: 10px;    border: 1px solid lightgrey;  margin-top: 10px;">
           <ion-input type="text" [(ngModel)]="data" placeholder="Name"></ion-input>
         </ion-item>
         <br>
-        <ion-item
-          style="border-radius: 5px; margin-left: 10px; margin-right: 10px;    border: 1px solid lightgrey; height: 45px; bottom: 15px;">
+        <ion-item style="border-radius: 5px; margin-left: 10px; margin-right: 10px;    border: 1px solid lightgrey;  ">
           <ion-input type="text" ng placeholder="Job title"></ion-input>
         </ion-item>
         <br>
-        <ion-item
-          style="border-radius: 5px; margin-left: 10px; margin-right: 10px;    border: 1px solid lightgrey; height: 45px; bottom: 30px;">
+        <ion-item style="border-radius: 5px; margin-left: 10px; margin-right: 10px;    border: 1px solid lightgrey;  ">
           <ion-input type="text" placeholder="Location"></ion-input>
         </ion-item>
         <br>
-        <ion-item
-          style="border-radius: 5px; margin-left: 10px; margin-right: 10px;    border: 1px solid lightgrey; height: 45px;bottom: 45px;">
+        <ion-item style="border-radius: 5px; margin-left: 10px; margin-right: 10px;    border: 1px solid lightgrey; ">
           <!-- <ion-input type="password" placeholder="Experience/employment history"></ion-input> -->
           <ion-label>Other Favours</ion-label>
           <ion-select value="dog">
@@ -161,8 +152,7 @@
           </ion-select>
         </ion-item>
         <br>
-        <ion-item
-          style="border-radius: 5px; margin-left: 10px; margin-right: 10px;    border: 1px solid lightgrey; height: 45px; bottom: 55px;;">
+        <ion-item style="border-radius: 5px; margin-left: 10px; margin-right: 10px;    border: 1px solid lightgrey; ">
           <!-- <ion-input type="password" placeholder="Experience/employment history"></ion-input> -->
           <ion-label>Qualifications/Certifications</ion-label>
           <ion-select value="dog">
@@ -171,21 +161,20 @@
           </ion-select>
         </ion-item>
         <br>
-        <ion-item
-          style="border-radius: 5px; margin-left: 10px; margin-right: 10px;    border: 1px solid lightgrey; height: 45px;bottom: 65px;">
+        <ion-item style="border-radius: 5px; margin-left: 10px; margin-right: 10px;    border: 1px solid lightgrey;">
           <ion-input type="password" placeholder="Reviews/Testimonials">
           </ion-input>
-          <ion-icon name="add" class="add"></ion-icon>
+          <!-- <ion-icon name="add" class="add"></ion-icon> -->
         </ion-item>
       </div>
     </div>
-    <div padding>
+    <!-- <div padding>
       <ion-button expand="block" class="message" (click)="validation('message')" routerDirection="forward">Message
       </ion-button>
     </div>
     <div padding>
       <ion-button expand="block" (click)="validation('validation')" class="time">Time Validation</ion-button>
-    </div>
+    </div> -->
     <div padding>
       <ion-button expand="block" class="time" (click)="onLogout()">Logout</ion-button>
     </div>

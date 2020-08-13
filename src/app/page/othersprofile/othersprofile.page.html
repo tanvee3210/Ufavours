@@ -36,14 +36,6 @@
         </ion-col>
       </ion-row>
 
-      <ion-row>
-        <ion-col size="4">
-          <ion-button size="small" (click)="openCameraOption()" class="edit">🖉 Edit Profile</ion-button>
-        </ion-col>
-        <ion-col size="8">
-          <!-- blank -->
-        </ion-col>
-      </ion-row>
 
       <ion-row>
         <ion-card class="cards">
@@ -55,22 +47,19 @@
 
       <div padding class="div33">
         <ion-item
-          style="border-radius: 5px; margin-left: 10px; margin-right: 10px;    border: 1px solid lightgrey; height: 45px; margin-top: 10px;">
+          style="border-radius: 5px; margin-left: 10px; margin-right: 10px;    border: 1px solid lightgrey;  margin-top: 10px;">
           <ion-input type="text" [(ngModel)]="data" placeholder="Name"></ion-input>
         </ion-item>
         <br>
-        <ion-item
-          style="border-radius: 5px; margin-left: 10px; margin-right: 10px;    border: 1px solid lightgrey; height: 45px; bottom: 15px;">
+        <ion-item style="border-radius: 5px; margin-left: 10px; margin-right: 10px;    border: 1px solid lightgrey;  ">
           <ion-input type="text" ng placeholder="Job title"></ion-input>
         </ion-item>
         <br>
-        <ion-item
-          style="border-radius: 5px; margin-left: 10px; margin-right: 10px;    border: 1px solid lightgrey; height: 45px; bottom: 30px;">
+        <ion-item style="border-radius: 5px; margin-left: 10px; margin-right: 10px;    border: 1px solid lightgrey; ">
           <ion-input type="text" placeholder="Location"></ion-input>
         </ion-item>
         <br>
-        <ion-item
-          style="border-radius: 5px; margin-left: 10px; margin-right: 10px;    border: 1px solid lightgrey; height: 45px;bottom: 45px;">
+        <ion-item style="border-radius: 5px; margin-left: 10px; margin-right: 10px;    border: 1px solid lightgrey; ">
           <!-- <ion-input type="password" placeholder="Experience/employment history"></ion-input> -->
           <ion-label>Other Favours</ion-label>
           <ion-select value="dog">
@@ -81,8 +70,7 @@
           </ion-select>
         </ion-item>
         <br>
-        <ion-item
-          style="border-radius: 5px; margin-left: 10px; margin-right: 10px;    border: 1px solid lightgrey; height: 45px; bottom: 55px;;">
+        <ion-item style="border-radius: 5px; margin-left: 10px; margin-right: 10px;    border: 1px solid lightgrey; ">
           <!-- <ion-input type="password" placeholder="Experience/employment history"></ion-input> -->
           <ion-label>Qualifications/Certifications</ion-label>
           <ion-select value="dog">
@@ -90,24 +78,27 @@
             <ion-select-option value="dog">zbc</ion-select-option>
           </ion-select>
         </ion-item>
-        <br>
-        <ion-item
-          style="border-radius: 5px; margin-left: 10px; margin-right: 10px;    border: 1px solid lightgrey; height: 45px;bottom: 65px;">
+
+        <!-- <ion-item
+          style="border-radius: 5px; margin-left: 10px; margin-right: 10px;    border: 1px solid lightgrey; ">
           <ion-input type="password" placeholder="Reviews/Testimonials" (click)="onReviews()">
           </ion-input>
           <ion-icon name="add" class="add"></ion-icon>
-        </ion-item>
+        </ion-item> -->
       </div>
     </div>
+
     <div padding>
-      <ion-button expand="block" class="message" (click)="validation('message')" routerDirection="forward">Message
+      <ion-button expand="block" class="review" (click)="onReviews()" routerDirection="forward">Review<ion-icon
+          name="add" class="add" slot="end"></ion-icon>
       </ion-button>
     </div>
-    <!-- <div padding>
-      <ion-button expand="block" (click)="validation('validation')" class="time">Time Validation</ion-button>
+    <div padding>
+      <ion-button expand="block" class="message" (click)="onMessage()" routerDirection="forward">Message
+      </ion-button>
     </div>
     <div padding>
-      <ion-button expand="block" class="time" (click)="onLogout()">Logout</ion-button>
-    </div> -->
+      <ion-button expand="block" (click)="timeValidationRequest()" class="time">Time Validation</ion-button>
+    </div>
   </ion-content>
 </ion-content>

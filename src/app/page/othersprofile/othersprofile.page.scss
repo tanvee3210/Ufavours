@@ -90,6 +90,7 @@ ion-button.message.md.button.button-block.button-solid.ion-activatable.ion-focus
     margin-left: 10px;
     color: #0ad2af;
     --background: none;
+    border: 1px solid lightgrey;
     margin-right: 10px;
 }
 
@@ -112,4 +113,13 @@ ion-icon.add.md.hydrated {
 ion-back-button.md.button.back-button-has-icon-only.in-toolbar.ion-activatable.ion-focusable.hydrated {
     display: block;
     color: #ffffff;
+}
+
+ion-button.review.md.button.button-block.button-solid.ion-activatable.ion-focusable.hydrated {
+    margin-left: 10px;
+    color: #212529;
+    border: 1px solid lightgrey;
+    --background: none;
+    margin-right: 10px;
+    margin-bottom: 10px;
 }

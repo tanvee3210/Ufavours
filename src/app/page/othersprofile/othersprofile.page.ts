@@ -12,7 +12,14 @@ export class OthersprofilePage implements OnInit {
 
   ngOnInit() {
   }
+
+  timeValidationRequest() {
+    this.router.navigate(['/', 'time-validation-request'])
+  }
   onReviews() {
     this.router.navigate(['/', 'review'])
+  }
+  onMessage() {
+    this.router.navigate(['/', 'send-message'])
   }
 }

@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { AcceptPage } from './accept.page';
+import { TimeValidationAcceptPage } from './time-validation-accept.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: AcceptPage
+    component: TimeValidationAcceptPage
   }
 ];
 
@@ -14,4 +14,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class AcceptPageRoutingModule {}
+export class TimeValidationAcceptPageRoutingModule {}

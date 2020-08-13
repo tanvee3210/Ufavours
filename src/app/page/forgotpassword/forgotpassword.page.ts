@@ -31,12 +31,6 @@ export class ForgotpasswordPage implements OnInit {
   }
 
   async onUpdate() {
-    // let token = await this.api_service.user.Token.token;
-    // token = "Bearer " + token;
-    // let headers = new Headers();
-    // headers.append("Content-Type", "application/json");
-    // headers.append("Authorization", token);
-    // let options: any = { headers: headers };
 
     if (this.email) {
       let userObj = {
