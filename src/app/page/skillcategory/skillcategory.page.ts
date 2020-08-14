@@ -13,6 +13,6 @@ export class SkillcategoryPage implements OnInit {
   ngOnInit() {
   }
   onskillLists() {
-    this.router.navigate(['/', 'othersprofile'])
+    this.router.navigate(['/', 'othersprofile'], { queryParams: { pagename: 'skillcategory' } })
   }
 }

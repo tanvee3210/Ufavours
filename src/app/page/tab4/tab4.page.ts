@@ -31,11 +31,11 @@ export class Tab4Page implements OnInit {
   ngOnInit() {
 
   }
-  onAcceptRequest() {
-    this.router.navigate(['/', 'time-validation-accept'])
+  onAcceptRequest(value) {
+    this.router.navigate(['/', 'time-validation-accept'], { queryParams: { id: value.task_id } })
   }
-  onRequestFromMe() {
-    this.router.navigate(['/', 'othersprofile'])
+  onRequestFromMe(value) {
+    this.router.navigate(['/', 'othersprofile'], { queryParams: { pagename: 'tab4' ,id: value.assign_to} })
   }
 
   // RequestForMe

@@ -22,7 +22,7 @@
   <div [ngSwitch]="notification">
     <ion-list *ngSwitchCase="'for'">
       <ion-card *ngFor="let list of requestForMe">
-        <ion-row (click)="onAcceptRequest()" routerDirection="forward">
+        <ion-row (click)="onAcceptRequest(list)" routerDirection="forward">
           <ion-col size="4">
             <img src="../../../assets/images/Ufavoursimages/Child.jpg" alt="">
           </ion-col>
@@ -37,7 +37,7 @@
 
     <ion-list *ngSwitchCase="'from'">
       <ion-card *ngFor="let list of requestFromMe">
-        <ion-row routerDirection="forward" (click)="onRequestFromMe()">
+        <ion-row routerDirection="forward" (click)="onRequestFromMe(list)">
           <ion-col size="4">
             <img src="../../../assets/images/Ufavoursimages/Child.jpg" alt="">
           </ion-col>
@@ -48,7 +48,7 @@
           </ion-col>
           <ion-col size="3">
             <p class="status"><img src="../../../assets/images/Ufavoursimages/approvedicon.png" alt="" class="iconss">
-              <small>Approved</small></p>
+              <small>{{list.status}}</small></p>
           </ion-col>
         </ion-row>
       </ion-card>
